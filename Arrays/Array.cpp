@@ -270,3 +270,59 @@ public:
 		arr = nullptr;
 	}
 };
+
+
+int main()
+{
+	Array arr1(10);
+
+	arr1.display();
+
+	// Insertion
+	cout << endl;
+	cout << "Insertion: " << endl;
+	arr1.insertAtStart(10);
+	arr1.insertAtStart(20);
+	arr1.insertAtEnd(30);
+
+	arr1.display();
+
+	arr1.insertAtIndex(15, 1);
+
+	arr1.display();
+
+	// Deletion
+	cout << endl;
+	cout << "Deletion: " << endl;
+	arr1.deleteFromStart();
+	arr1.display();
+
+	arr1.deleteFromIndex(1);
+	arr1.display();
+
+	arr1.deleteFromEnd();
+	arr1.display();
+
+	// Update
+	cout << endl;
+	cout << "Updation: " << endl;
+	arr1.updateAtStart(100);
+	arr1.display();
+
+	arr1.updateAtIndex(0, 200);
+	arr1.display();
+
+	arr1.updateAtEnd(300);
+	arr1.display();
+
+	// Rotation
+	cout << endl;
+	cout << "Rotation: " << endl;
+	arr1.rotateRight(1);
+	arr1.display();
+
+	arr1.rotateLeft(1);
+	arr1.display();
+
+	return 0;
+}
