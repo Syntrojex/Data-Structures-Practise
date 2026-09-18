@@ -63,6 +63,11 @@ public:
 	// Parameterized Constructor
 	Array(int capacity)
 	{
+		if (capacity <= 0)
+		{
+			capacity = 2;
+		}
+
 		this->capacity = capacity;
 		arr = new int[capacity];
 		size = 0;
