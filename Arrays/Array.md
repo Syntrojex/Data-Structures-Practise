@@ -146,3 +146,37 @@ void shiftLeft(int fromIndex)
 </details>
 
 ---
+
+# 3. Constructors
+
+<details>
+<summary><b>Default Constructor</b></summary>
+
+```cpp
+Array()
+{
+    capacity = 2;
+    arr = new int[capacity];
+    size = 0;
+}
+```
+
+</details>
+
+---
+
+<details>
+<summary><b>Parameterized Constructor</b></summary>
+
+```cpp
+Array(int capacity)
+{
+    this->capacity = capacity;
+    arr = new int[capacity];
+    size = 0;
+}
+```
+
+</details>
+
+---
