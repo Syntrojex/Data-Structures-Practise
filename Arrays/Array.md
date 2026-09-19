@@ -180,3 +180,96 @@ Array(int capacity)
 </details>
 
 ---
+
+# 4. Insertion
+
+<details>
+<summary><b>insertAtStart(int value)</b> — Insert at beginning</summary>
+
+```cpp
+void insertAtStart(int value)
+{
+    if (isFull())
+    {
+        regrow();
+    }
+
+    if (size > 0)
+    {
+        shiftRight(0);
+    }
+
+    arr[0] = value;
+    size++;
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)` excluding regrow
+
+</details>
+
+---
+
+<details>
+<summary><b>insertAtIndex(int value, int index)</b> — Insert at a specific index</summary>
+
+```cpp
+void insertAtIndex(int value, int index)
+{
+    if (index < 0 || index > size)
+    {
+        cout << "Invalid Index!" << endl;
+        return;
+    }
+
+    if (isFull())
+    {
+        regrow();
+    }
+
+    if (index < size)
+    {
+        shiftRight(index);
+    }
+
+    arr[index] = value;
+    size++;
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)` excluding regrow
+
+</details>
+
+---
+
+<details>
+<summary><b>insertAtEnd(int value)</b> — Insert at end</summary>
+
+```cpp
+void insertAtEnd(int value)
+{
+    if (isFull())
+    {
+        regrow();
+    }
+
+    arr[size] = value;
+    size++;
+}
+```
+
+### Complexity
+
+- Average: `O(1)`
+- Worst case: `O(n)` when regrow occurs
+
+</details>
+
+---
