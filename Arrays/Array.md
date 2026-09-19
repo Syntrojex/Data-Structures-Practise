@@ -273,3 +273,82 @@ void insertAtEnd(int value)
 </details>
 
 ---
+
+# 5. Deletion
+
+<details>
+<summary><b>deleteFromStart()</b> — Delete first element</summary>
+
+```cpp
+void deleteFromStart()
+{
+    if (size == 0)
+    {
+        cout << "Array is Empty!" << endl;
+        return;
+    }
+
+    shiftLeft(0);
+    size--;
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+</details>
+
+---
+
+<details>
+<summary><b>deleteFromIndex(int index)</b> — Delete from a specific index</summary>
+
+```cpp
+void deleteFromIndex(int index)
+{
+    if (index < 0 || index >= size)
+    {
+        cout << "Invalid Index!" << endl;
+        return;
+    }
+
+    shiftLeft(index);
+    size--;
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+</details>
+
+---
+
+<details>
+<summary><b>deleteFromEnd()</b> — Delete last element</summary>
+
+```cpp
+void deleteFromEnd()
+{
+    if (size == 0)
+    {
+        cout << "Array is Empty!" << endl;
+        return;
+    }
+
+    size--;
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(1)`
+
+</details>
+
+---
