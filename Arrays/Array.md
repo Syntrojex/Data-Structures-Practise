@@ -90,3 +90,59 @@ void regrow()
 </details>
 
 ---
+
+<details>
+<summary><b>shiftRight(int fromIndex)</b> — Shift elements right</summary>
+
+### Purpose
+
+Moves elements one position to the right to create an empty position for insertion.
+
+### Code
+
+```cpp
+void shiftRight(int fromIndex)
+{
+    for (int i = size - 1; i >= fromIndex; i--)
+    {
+        arr[i + 1] = arr[i];
+    }
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+</details>
+
+---
+
+<details>
+<summary><b>shiftLeft(int fromIndex)</b> — Shift elements left</summary>
+
+### Purpose
+
+Moves elements one position to the left after deletion.
+
+### Code
+
+```cpp
+void shiftLeft(int fromIndex)
+{
+    for (int i = fromIndex; i < size - 1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
+}
+```
+
+### Complexity
+
+- Time: `O(n)`
+- Space: `O(1)`
+
+</details>
+
+---
